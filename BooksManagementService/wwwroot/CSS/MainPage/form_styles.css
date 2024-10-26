@@ -1,0 +1,30 @@
+﻿.filter-form {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.filter-form div {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.filter-form label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.filter-form select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.filter-form button {
+    padding: 10px 15px;
+    margin-left: 10px;
+}
+
+

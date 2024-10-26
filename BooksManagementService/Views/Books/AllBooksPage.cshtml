@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Page</title>
+    <link rel="stylesheet" href="~/CSS/Books/books_table_styles.css">
+    <link rel="stylesheet" href="~/CSS/Books/delete_book_window_styles.css">
+    <link rel="stylesheet" href="~/CSS/Books/pagination_styles.css">
+    <link rel="stylesheet" type="text/css" href="~/CSS/MainPage/search_styles.css" />
+    <link rel="stylesheet" type="text/css" href="~/CSS/MainPage/form_styles.css" />
+</head>
+<body>
+    <button class="btn btn-primary" onclick="addBook()">Add book</button>
+    <form id="filterForm" class="filter-form">
+        <div>
+            <label for="genreFilter">Filter by Genre:</label>
+            <select id="genreFilter" name="genre">
+                <option value="">All Genres</option>
+                <option value="Adventures">Adventures</option>
+                <option value="LoveStories">Love Stories</option>
+                <option value="Horrors">Horrors</option>
+                <option value="FairyTales">Fairy Tales</option>
+            </select>
+        </div>
+    </form>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by title...">
+        <button type="button" class="btn btn-primary" onclick="applyFilters()">Search</button>
+    </div>
+
+<table id="booksTable">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Available Copies</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody id="booksTableBody"></tbody>
+    </table>
+
+    <div id="pagination" class="pagination"></div>
+
+    <div id="deleteModal" class="modal" style="display: none;">
+         <div class="modal-content">
+             <span class="close" onclick="closeModal()">&times;</span>
+             <h2>Delete Book</h2>
+             <p>Are you sure you want to delete this book?</p>
+             <button class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+             <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+         </div>
+     </div>
+
+<script>
+        let currentPage = 1;
+        const pageSize = 10;
+        let bookIdToDelete = null;
+        async function loadBooks(pageNumber) {
+            const genreFilter = document.getElementById('genreFilter').value;
+            const searchTerm = document.getElementById('searchInput').value;
+            try {
+                const url = `/api/books/GetBooks?pageNumber=${pageNumber}&pageSize=${pageSize}`
+                                            + `&genre=${encodeURIComponent(genreFilter)}`
+                                            + `&searchTerm=${encodeURIComponent(searchTerm)}`;
+                const response = await fetch(url, { 
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`, 
+                        'Content-Type': 'application/json'
+                    }
+                });              
+                if (response.ok) {  
+                    const result = await response.json();
+                    displayBooks(result.books);
+                    displayPagination(result.currentPage, result.totalPages);
+                } else {
+                    document.getElementById('booksTableBody').innerHTML = "<tr><td colspan='7'>Failed to load books. Please login again.</td></tr>";
+                }
+            } catch (error) {
+                document.getElementById('booksTableBody').innerHTML = "<tr><td colspan='7'>Error loading books. Please try again later.</td></tr>";
+            }
+        }
+
+        function displayBooks(books) {
+            const booksList = document.getElementById('booksTableBody');
+            booksList.innerHTML = '';  
+            books.forEach(book => {
+                const bookRow = document.createElement('tr');
+                bookRow.setAttribute('data-book-id', book.id);  
+                bookRow.innerHTML = `
+                    <td>${book.bookTitle}</td>
+                    <td>${book.authorName} ${book.authorLastName}</td>
+                    <td>${book.amount}</td>
+                    <td>
+                        <button class="btn btn-primary" onclick="editBook(${book.id})">Edit</button>
+                        <button class="btn btn-danger" onclick="deleteBook(${book.id})">Delete</button>
+                    </td>
+                `;     
+                booksList.appendChild(bookRow); 
+            });
+        }
+        
+        function displayPagination(currentPage, totalPages) {
+            const paginationContainer = document.getElementById('pagination');
+            paginationContainer.innerHTML = '';  
+    
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.classList.add('pagination-btn');
+                pageButton.innerText = i;
+                pageButton.onclick = () => loadBooks(i);  
+                
+                if (i === currentPage) {
+                    pageButton.classList.add('active');  
+                }      
+                paginationContainer.appendChild(pageButton);
+            }
+        }
+        
+        function applyFilters() {
+            loadBooks();
+        }
+        
+        function closeModal() {
+            document.getElementById('deleteModal').style.display = 'none';
+            bookIdToDelete = null;  
+        }
+        
+        async function deleteBook(bookId) {
+            bookIdToDelete = bookId;  
+                document.getElementById('deleteModal').style.display = 'block';  
+        }
+            
+        async function editBook(bookId) {
+            window.location.href = `/api/books/edit/${bookId}`;
+        }
+        
+        document.getElementById('confirmDeleteBtn').addEventListener('click', async function() {
+            if (bookIdToDelete) {
+                const token = localStorage.getItem('authToken');
+                try {
+                    const response = await fetch(`/api/books/delete/${bookIdToDelete}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'Authorization': `Bearer ${token}`,
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        await loadBooks();  
+                        closeModal();  
+                    } else {
+                        alert('Failed to delete the book.');
+                    }
+                } catch (error) {
+                    alert('Error occurred while deleting the book.');
+                }
+            }
+        });
+        
+        async function addBook() {
+            window.location.href = `/api/books/AddBook`;       
+        }
+        
+        loadBooks(1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+﻿@page
+@model Entities.DataTransferObjects.UserForRegistrationDto
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="~/CSS/Auth/register_page_styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <div>
+                <label for="FirstName">First name:</label>
+                <input type="text" id="FirstName" required/>
+            </div>
+
+            <div>
+                <label for="LastName">Last name:</label>
+                <input type="text" id="LastName" required/>
+            </div>
+
+            <div>
+                <label for="UserName">Username:</label>
+                <input type="text" id="UserName" required/>
+            </div>
+
+            <div>
+                <label for="Password">Password:</label>
+                <input type="password" id="Password" required/>
+            </div>
+
+            <div>
+                <label for="PasswordConfirmation">Password confirmation:</label>
+                <input type="password" id="PasswordConfirmation" required/>
+            </div>
+
+            <div>
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" required/>
+            </div>
+
+            <div>
+                <label for="PhoneNumber">Phone:</label>
+                <input type="text" id="PhoneNumber" required/>
+            </div>
+
+            <div>
+                <label for="Roles">Choose your role:</label>
+                <select asp-for="Roles" id="Roles">
+                    <option value="User">User</option>
+                    <option value="Administrator">Administrator</option>
+                </select>
+            </div>
+
+            <div>
+                <input type="submit" value="Register"/>
+            </div>
+        </form>
+
+        <button id="loginButton" onclick="window.location.href='/api/authentication/loginPage'">Login</button>
+
+        <div class="response" id="response"></div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const FirstName = document.getElementById('FirstName').value;
+            const LastName = document.getElementById('LastName').value;
+            const UserName = document.getElementById('UserName').value;
+            const Password = document.getElementById('Password').value;
+            const PasswordConfirmation = document.getElementById('PasswordConfirmation').value;
+            const Email = document.getElementById('Email').value;
+            const PhoneNumber = document.getElementById('PhoneNumber').value;
+            const Role = document.getElementById('Roles').value;
+            const responseDiv = document.getElementById('response');
+
+            if (Password !== PasswordConfirmation) {
+                responseDiv.style.display = "block";
+                responseDiv.innerHTML = "Passwords do not match!";
+                return;
+            }
+
+            const registerData = {
+                firstname: FirstName,
+                lastname: LastName,
+                username: UserName,
+                password: Password,
+                email: Email,
+                phonenumber: PhoneNumber,
+                role: Role
+            };
+
+            try {
+                const response = await fetch('/api/authentication/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(registerData)
+                });
+
+                if (response.ok) {
+                    window.location.href = "/api/authentication/loginPage";
+                } else {
+                    const errorData = await response.json();
+                            
+                    responseDiv.style.display = "block";
+                    responseDiv.innerHTML = ''; 
+            
+                    for (const key in errorData) {
+                        if (errorData.hasOwnProperty(key)) {
+                            errorData[key].forEach(error => {
+                                const errorElement = document.createElement('p');
+                                errorElement.textContent = `${key}: ${error}`;
+                                responseDiv.appendChild(errorElement);
+                            });
+                        }
+                    }
+                }
+            } catch (error) {
+                responseDiv.style.display = "block";
+                responseDiv.innerHTML = 'Error: ' + error;
+            }
+        });
+    </script>
+</body>
+</html>

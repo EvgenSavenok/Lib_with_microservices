@@ -1,0 +1,101 @@
+﻿@model Entities.DataTransferObjects.BookDto
+
+<h2>Add book</h2>
+
+<link rel="stylesheet" type="text/css" href="~/CSS/Books/add_book_page_styles.css" />
+<form id="addBookForm">
+    <div>
+        <label>Book Title</label>
+        <input type="text" name="BookTitle" placeholder="Book Title" />
+    </div>
+
+    <div>
+        <label>ISBN</label>
+        <input type="text" name="ISBN" placeholder="ISBN" />
+    </div>
+
+    <div>
+        <label>Author name</label>
+        <input type="text" name="AuthorName" placeholder="AuthorName" />
+    </div>
+    
+    <div>
+        <label>Author last name</label>
+        <input type="text" name="AuthorLastName" placeholder="AuthorLastName" />
+    </div>
+
+    <div>
+        <label>Genre</label>
+        <select name="Genre">
+            @foreach (var genre in ViewBag.Genres)  
+            {
+                <option value="@genre.Value" @(genre.Selected ? "selected" : "")>
+                    @genre.Text  
+                </option>
+            }
+        </select>
+    </div>
+
+    <div>
+        <label>Description</label>
+        <input type="text" name="Description" placeholder="Description" />
+    </div>
+
+    <div>
+        <label>Amount</label>
+        <input type="text" name="Amount" placeholder="Amount" />
+    </div>
+
+    <button type="button" onclick="submitForm()">Add</button>
+</form>
+
+<script>
+    async function submitForm() {
+        const form = document.getElementById('addBookForm');
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        const token = localStorage.getItem('authToken');
+        
+        const bookData = {
+                BookTitle: data.BookTitle,
+                ISBN: data.ISBN,
+                AuthorName: data.AuthorName, 
+                AuthorLastName: data.AuthorLastName, 
+                Genre: data.Genre,
+                Description: data.Description,
+                Amount: parseInt(data.Amount)
+            };
+
+        try {
+            const response = await fetch(`/api/books/add`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+                },
+            body: JSON.stringify(bookData)
+            });
+
+            if (response.ok) {
+                const booksResponse = await fetch('/api/books/GetBooks', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                    }
+                });
+                if (booksResponse.ok)
+                    window.location.href = '/api/books/admin';
+                else {
+                    alert("Failed to load list of books");
+                }
+            } else {
+                alert("Failed to add the book. Please try again.");
+            }
+        } catch (error) {
+            alert("An error occurred. Please try again later.");
+        }
+    }
+</script>

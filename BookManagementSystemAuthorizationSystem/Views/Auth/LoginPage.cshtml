@@ -1,0 +1,70 @@
+﻿@page
+@model Entities.DataTransferObjects.UserForAuthenticationDto
+
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/CSS/Auth/login_page_styles.css" />
+</head>
+<body>
+    <div class="container"> 
+        <h2>Login</h2>
+            <form id="loginForm">
+                <label for="UserName">Username:</label>
+                <input type="text" id="UserName" required />
+
+                <label for="Password">Password:</label>
+                <input type="password" id="Password" required />
+
+                <input type="submit" value="Login" />
+            </form>
+        <button type="button" id="registerButton" onclick="window.location.href='/api/authentication/registerPage'">Register</button>
+        <div class="response" id="response"></div> 
+    </div>
+
+    <script>
+        const responseDiv = document.getElementById('response');
+        responseDiv.style.display = "hide";
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            e.preventDefault(); 
+
+            const username = document.getElementById('UserName').value;
+            const password = document.getElementById('Password').value;
+
+            const loginData = {
+                username: username,
+                password: password
+            };
+
+            try {
+                let response = await fetch('/api/authentication/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(loginData)
+                });
+        
+                if (response.ok) {  
+                    console.log(response);
+                    window.location.href = `http://localhost:5023/api/books/admin`;                   
+                } else {               
+                    responseDiv.innerHTML = 'Login failed: ' + JSON.stringify(result);
+                }
+            } catch (error) {
+                document.getElementById('response').innerHTML = 'Error: ' + error;
+            }
+        });
+        
+        function parseJwt(token) {
+            const base64Url = token.split('.')[1];            
+            const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');           
+            const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));           
+            return JSON.parse(jsonPayload);
+        }
+    </script>
+</body>
+</html>

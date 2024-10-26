@@ -1,0 +1,6 @@
+@BookManagementSystemAuthorizationSystem_HostAddress = http://localhost:5148
+
+GET {{BookManagementSystemAuthorizationSystem_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,92 @@
+﻿@model Entities.DataTransferObjects.BookDto
+
+<h2>Edit book</h2>
+
+<link rel="stylesheet" type="text/css" href="~/CSS/Books/edit_book_page_styles.css" />
+<form id="editBookForm">
+    <div>
+        <label>Book Title</label>
+        <input type="text" name="BookTitle" value="@Model.BookTitle" placeholder="Book Title" required />
+    </div>
+
+    <div>
+        <label>ISBN</label>
+        <input type="text" name="ISBN" value="@Model.ISBN" placeholder="ISBN" required />
+    </div>
+
+    <div>
+        <label>ISBN</label>
+        <input type="text" name="AuthorName" value="@Model.AuthorName" placeholder="AuthorName" required />
+    </div>
+    
+     <div>
+        <label>ISBN</label>
+        <input type="text" name="AuthorLastName" value="@Model.AuthorLastName" placeholder="AuthorLastName" required />
+    </div>
+    
+    <div>
+        <label>Genre</label>
+        <select name="Genre" required>
+            @foreach (var genre in ViewBag.Genres)  
+            {
+                <option value="@genre.Value" @(genre.Selected ? "selected" : "")>
+                    @genre.Text
+                </option>
+            }
+        </select>
+    </div>
+
+    <div>
+        <label>Description</label>
+        <input type="text" name="Description" value="@Model.Description" placeholder="Description" required />
+    </div>
+
+    <div>
+        <label>Amount</label>
+        <input type="text" name="Amount" value="@Model.Amount" placeholder="Amount" required />
+    </div>
+
+    <button type="button" onclick="submitForm()">Save</button>
+</form>
+
+<script>
+    async function submitForm() {
+        const form = document.getElementById('editBookForm');
+        
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());  
+
+        const bookId = @Model.Id;  
+        const token = localStorage.getItem('authToken');
+        
+        const bookData = {
+            Id: bookId,
+            BookTitle: data.BookTitle,
+            ISBN: data.ISBN,
+            AuthorName: data.authorName,
+            AuthorLastName: data.authorLastName,
+            Genre: data.Genre,
+            Description: data.Description,
+            Amount: parseInt(data.Amount)
+        };
+
+        try {
+            const response = await fetch(`/api/books/${bookId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify(bookData)  
+            });
+            
+            if (response.ok) {
+                window.location.href = '/api/books/admin';  
+            } else {
+                alert("Failed to update the book. Please try again.");
+            }
+        } catch (error) {
+            alert("An error occurred. Please try again later.");
+        }
+    }
+</script>

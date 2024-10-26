@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManagementSystemAuthorizationSystem", "BookManagementSystemAuthorizationSystem\BookManagementSystemAuthorizationSystem.csproj", "{318C680D-3E7C-45A0-B04A-F5237958677B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksManagementService", "BooksManagementService\BooksManagementService.csproj", "{4EFEA404-3925-489E-B5D6-227BB0DF4EE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API Gateway", "API Gateway\API Gateway.csproj", "{012DDBFC-5E8A-4E5C-9962-221F276FD4BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{318C680D-3E7C-45A0-B04A-F5237958677B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{318C680D-3E7C-45A0-B04A-F5237958677B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{318C680D-3E7C-45A0-B04A-F5237958677B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{318C680D-3E7C-45A0-B04A-F5237958677B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EFEA404-3925-489E-B5D6-227BB0DF4EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EFEA404-3925-489E-B5D6-227BB0DF4EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EFEA404-3925-489E-B5D6-227BB0DF4EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EFEA404-3925-489E-B5D6-227BB0DF4EE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{012DDBFC-5E8A-4E5C-9962-221F276FD4BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012DDBFC-5E8A-4E5C-9962-221F276FD4BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012DDBFC-5E8A-4E5C-9962-221F276FD4BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012DDBFC-5E8A-4E5C-9962-221F276FD4BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
