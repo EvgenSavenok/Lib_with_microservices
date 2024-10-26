@@ -1,7 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using Entities.Models;
+﻿using BooksManagementService.Models;
 
-namespace Entities.DataTransferObjects;
+namespace BooksManagementService.DataTransferObjects;
 
 public class BookDto
 {

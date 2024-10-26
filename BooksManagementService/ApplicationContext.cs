@@ -1,5 +1,5 @@
-﻿using Entities.Configuration;
-using Entities.Models;
+﻿using BooksManagementService.Models;
+using Entities.Configuration;
 using Microsoft.EntityFrameworkCore;
 
 namespace Entities;

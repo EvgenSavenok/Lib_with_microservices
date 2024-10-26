@@ -21,7 +21,7 @@ namespace BooksManagementService.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Entities.Models.Book", b =>
+            modelBuilder.Entity("BooksManagementService.Models.Book", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

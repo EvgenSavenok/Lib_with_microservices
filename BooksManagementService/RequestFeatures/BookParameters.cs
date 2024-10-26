@@ -1,10 +1,9 @@
-﻿using Entities.Models;
+﻿using BooksManagementService.Models;
 
 namespace Entities.RequestFeatures;
 
 public class BookParameters : RequestParameters
 {
     public BookGenre Genre { get; set; }
-    public int AuthorId { get; set; }
-    public string SearchTerm { get; set; } = null!;
+    public string? SearchTerm { get; set; } = null!;
 }

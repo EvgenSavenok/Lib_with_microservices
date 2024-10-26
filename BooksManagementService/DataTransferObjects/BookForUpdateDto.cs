@@ -1,6 +1,6 @@
-﻿using Entities.Models;
+﻿using BooksManagementService.Models;
 
-namespace Entities.DataTransferObjects;
+namespace BooksManagementService.DataTransferObjects;
 
 public class BookForUpdateDto
 {

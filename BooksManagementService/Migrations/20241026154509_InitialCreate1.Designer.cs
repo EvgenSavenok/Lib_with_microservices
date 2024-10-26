@@ -11,8 +11,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BooksManagementService.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20241025123730_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20241026154509_InitialCreate1")]
+    partial class InitialCreate1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace BooksManagementService.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Entities.Models.Book", b =>
+            modelBuilder.Entity("BooksManagementService.Models.Book", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

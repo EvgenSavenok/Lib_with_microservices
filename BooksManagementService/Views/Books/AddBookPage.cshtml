@@ -1,4 +1,4 @@
-﻿@model Entities.DataTransferObjects.BookDto
+﻿@model BooksManagementService.DataTransferObjects.BookDto
 
 <h2>Add book</h2>
 
@@ -16,12 +16,12 @@
 
     <div>
         <label>Author name</label>
-        <input type="text" name="AuthorName" placeholder="AuthorName" />
+        <input type="text" name="AuthorName" placeholder="Author name" />
     </div>
     
     <div>
         <label>Author last name</label>
-        <input type="text" name="AuthorLastName" placeholder="AuthorLastName" />
+        <input type="text" name="AuthorLastName" placeholder="Author last name" />
     </div>
 
     <div>
@@ -55,34 +55,35 @@
 
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
-
-        const token = localStorage.getItem('authToken');
-        
+        const genreAsString = data.Genre;   
+        const genreAsNumber = {
+            "All": 0,
+            "Adventures": 1,
+            "LoveStories": 2,
+            "Horrors": 3,
+            "FairyTales": 4
+        }[genreAsString] || null
         const bookData = {
-                BookTitle: data.BookTitle,
-                ISBN: data.ISBN,
-                AuthorName: data.AuthorName, 
-                AuthorLastName: data.AuthorLastName, 
-                Genre: data.Genre,
-                Description: data.Description,
-                Amount: parseInt(data.Amount)
-            };
-
+            BookTitle: data.BookTitle,
+            ISBN: data.ISBN,
+            AuthorName: data.AuthorName, 
+            AuthorLastName: data.AuthorLastName, 
+            Genre: genreAsNumber,
+            Description: data.Description,
+            Amount: parseInt(data.Amount)
+        };
         try {
             const response = await fetch(`/api/books/add`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
                 },
-            body: JSON.stringify(bookData)
+                body: JSON.stringify(bookData)
             });
-
             if (response.ok) {
                 const booksResponse = await fetch('/api/books/GetBooks', {
                 method: 'GET',
                 headers: {
-                    'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'
                     }
                 });

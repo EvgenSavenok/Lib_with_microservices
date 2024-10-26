@@ -1,4 +1,4 @@
-﻿using Entities.Models;
+﻿using BooksManagementService.Models;
 using Entities.RequestFeatures;
 
 namespace Contracts;

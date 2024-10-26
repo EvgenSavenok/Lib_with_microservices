@@ -1,6 +1,6 @@
-﻿using Contracts;
+﻿using BooksManagementService.Models;
+using Contracts;
 using Entities;
-using Entities.Models;
 using Entities.RequestFeatures;
 using Microsoft.EntityFrameworkCore;
 using Repository.Extensions;
@@ -16,8 +16,10 @@ public class BookRepository : RepositoryBase<Book>, IBookRepository
 
     public async Task<IEnumerable<Book>> GetAllBooksAsync(BookParameters bookParameters, bool trackChanges)
     {
-        var books = await FindByCondition(b => bookParameters.Genre == 0 
-                                               || b.Genre == bookParameters.Genre, trackChanges)
+        if (bookParameters.Genre == BookGenre.All)
+            bookParameters.Genre = 0;
+        var books = await FindByCondition(b => 
+                (bookParameters.Genre == 0 || b.Genre == bookParameters.Genre), trackChanges)
             .OrderBy(b => b.BookTitle)
             .Skip((bookParameters.PageNumber - 1) * bookParameters.PageSize)
             .Take(bookParameters.PageSize)

@@ -1,4 +1,4 @@
-﻿@model Entities.DataTransferObjects.BookDto
+﻿@model BooksManagementService.DataTransferObjects.BookDto
 
 <h2>Edit book</h2>
 
@@ -15,13 +15,13 @@
     </div>
 
     <div>
-        <label>ISBN</label>
-        <input type="text" name="AuthorName" value="@Model.AuthorName" placeholder="AuthorName" required />
+        <label>Author name</label>
+        <input type="text" name="AuthorName" value="@Model.AuthorName" placeholder="Author name" required />
     </div>
     
-     <div>
-        <label>ISBN</label>
-        <input type="text" name="AuthorLastName" value="@Model.AuthorLastName" placeholder="AuthorLastName" required />
+    <div>
+        <label>Author last name</label>
+        <input type="text" name="AuthorLastName" value="@Model.AuthorLastName" placeholder="Author last name" required />
     </div>
     
     <div>
@@ -57,25 +57,29 @@
         const data = Object.fromEntries(formData.entries());  
 
         const bookId = @Model.Id;  
-        const token = localStorage.getItem('authToken');
-        
+        const genreAsString = data.Genre;   
+                const genreAsNumber = {
+                    "All": 0,
+                    "Adventures": 1,
+                    "LoveStories": 2,
+                    "Horrors": 3,
+                    "FairyTales": 4
+                }[genreAsString] || null
         const bookData = {
             Id: bookId,
             BookTitle: data.BookTitle,
             ISBN: data.ISBN,
-            AuthorName: data.authorName,
-            AuthorLastName: data.authorLastName,
-            Genre: data.Genre,
+            AuthorName: data.AuthorName,
+            AuthorLastName: data.AuthorLastName,
+            Genre: genreAsNumber,
             Description: data.Description,
             Amount: parseInt(data.Amount)
         };
-
         try {
             const response = await fetch(`/api/books/${bookId}`, {
                 method: 'PUT',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
+                    'Content-Type': 'application/json',                   
                 },
                 body: JSON.stringify(bookData)  
             });

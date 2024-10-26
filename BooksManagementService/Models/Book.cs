@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
-namespace Entities.Models;
+namespace BooksManagementService.Models;
 
 public enum BookGenre
 {
+    All = 0,
     Adventures = 1, 
     LoveStories = 2,
     Horrors = 3,

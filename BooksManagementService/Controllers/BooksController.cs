@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using BooksManagementService.DataTransferObjects;
+using BooksManagementService.Models;
 using Contracts;
-using Entities.DataTransferObjects;
-using Entities.Models;
 using Entities.RequestFeatures;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;

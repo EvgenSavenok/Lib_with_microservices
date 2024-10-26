@@ -1,4 +1,4 @@
-﻿using Entities.Models;
+﻿using BooksManagementService.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

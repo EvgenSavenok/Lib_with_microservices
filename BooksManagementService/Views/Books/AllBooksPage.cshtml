@@ -63,16 +63,15 @@
             const searchTerm = document.getElementById('searchInput').value;
             try {
                 const url = `/api/books/GetBooks?pageNumber=${pageNumber}&pageSize=${pageSize}`
-                                            + `&genre=${encodeURIComponent(genreFilter)}`
-                                            + `&searchTerm=${encodeURIComponent(searchTerm)}`;
+                                    + `&genre=${genreFilter || 'All'}` 
+                                    + `&searchTerm=${searchTerm ? encodeURIComponent(searchTerm) : 'null'}`;
                 const response = await fetch(url, { 
                     method: 'GET',
-                    headers: {
-                        'Authorization': `Bearer ${token}`, 
+                    headers: { 
                         'Content-Type': 'application/json'
                     }
                 });              
-                if (response.ok) {  
+                if (response.ok) {
                     const result = await response.json();
                     displayBooks(result.books);
                     displayPagination(result.currentPage, result.totalPages);
@@ -121,7 +120,7 @@
         }
         
         function applyFilters() {
-            loadBooks();
+            loadBooks(1);
         }
         
         function closeModal() {
@@ -140,18 +139,17 @@
         
         document.getElementById('confirmDeleteBtn').addEventListener('click', async function() {
             if (bookIdToDelete) {
-                const token = localStorage.getItem('authToken');
                 try {
                     const response = await fetch(`/api/books/delete/${bookIdToDelete}`, {
                         method: 'DELETE',
-                        headers: {
-                            'Authorization': `Bearer ${token}`,
+                        headers: {                           
                             'Content-Type': 'application/json'
                         }
                     });
                     
                     if (response.ok) {
-                        await loadBooks();  
+                        console.log(response);
+                        await loadBooks(1);  
                         closeModal();  
                     } else {
                         alert('Failed to delete the book.');
