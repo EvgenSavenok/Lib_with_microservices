@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API Gateway", "API Gateway\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{F20269DF-404A-4122-88E0-440B08E96EF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManagementAPI.IntegrationTests", "BookManagementAPI.IntegrationTests\BookManagementAPI.IntegrationTests.csproj", "{4CE21B44-DD40-4D38-9131-A4C727294DA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{F20269DF-404A-4122-88E0-440B08E96EF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F20269DF-404A-4122-88E0-440B08E96EF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F20269DF-404A-4122-88E0-440B08E96EF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CE21B44-DD40-4D38-9131-A4C727294DA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CE21B44-DD40-4D38-9131-A4C727294DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CE21B44-DD40-4D38-9131-A4C727294DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CE21B44-DD40-4D38-9131-A4C727294DA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

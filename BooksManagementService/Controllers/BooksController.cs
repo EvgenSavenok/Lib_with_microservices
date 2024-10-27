@@ -25,6 +25,13 @@ public class BooksController : Controller
     {
         return View("~/Views/Books/AllBooksPage.cshtml");
     }
+
+    [HttpGet("GetBooksCount")]
+    public async Task<IActionResult> GetBooksCount([FromQuery] BookParameters requestParameters)
+    {
+        int booksCount = await _repository.Book.CountBooksAsync(requestParameters);
+        return Ok(booksCount);
+    }
     
     [HttpGet("GetBooks")]
     public async Task<IActionResult> GetBooks([FromQuery] BookParameters requestParameters)
