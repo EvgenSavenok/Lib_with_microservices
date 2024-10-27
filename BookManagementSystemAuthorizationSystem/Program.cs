@@ -1,5 +1,7 @@
 using System.Text.Json.Serialization;
 using BookManagementSystemAuthorizationSystem.Contracts;
+using BookManagementSystemAuthorizationSystem.RabbitMq;
+using BookManagementSystemAuthorizationSystem.RabbitMq.Contracts;
 using Library_Web_Application.Extensions;
 using Repository;
 
@@ -11,6 +13,8 @@ builder.Services.ConfigureIdentity();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IAuthenticationManager, AuthenticationManager>();
+builder.Services.AddScoped<IRabbitMqService, RabbitMqService>();
+builder.Services.ConfigureSwagger();
 
 builder.Services.AddControllersWithViews().AddJsonOptions(options =>
 {
@@ -18,6 +22,12 @@ builder.Services.AddControllersWithViews().AddJsonOptions(options =>
 });
 
 var app = builder.Build();
+
+app.UseSwagger(); 
+app.UseSwaggerUI(s =>
+{
+    s.SwaggerEndpoint("/swagger/v1/swagger.json", "Library API v1"); 
+});
 
 app.UseStaticFiles();
 

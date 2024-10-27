@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
 namespace Library_Web_Application.Extensions;
 
@@ -29,5 +30,13 @@ public static class ServiceExtensions
             builder.Services);
         builder.AddEntityFrameworkStores<ApplicationContext>()
             .AddDefaultTokenProviders();
+    }
+    
+    public static void ConfigureSwagger(this IServiceCollection services) 
+    { 
+        services.AddSwaggerGen(s => 
+        {
+            s.SwaggerDoc("v1", new OpenApiInfo { Title = "Library API", Version = "v1" });
+        }); 
     }
 }

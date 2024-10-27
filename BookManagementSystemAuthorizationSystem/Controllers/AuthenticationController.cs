@@ -4,6 +4,8 @@ using Entities;
 using Entities.DataTransferObjects;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using BookManagementSystemAuthorizationSystem.RabbitMq;
+using BookManagementSystemAuthorizationSystem.RabbitMq.Contracts;
 
 namespace BookManagementSystemAuthorizationSystem.Controllers;
 
@@ -14,11 +16,14 @@ public class AuthenticationController : Controller
     private readonly IMapper _mapper;
     private readonly UserManager<User> _userManager;
     private readonly IAuthenticationManager _authManager;
-    public AuthenticationController (IMapper mapper, UserManager<User> userManager, IAuthenticationManager authManager)
+    private readonly IRabbitMqService _rabbitMqService;
+    public AuthenticationController (IMapper mapper, UserManager<User> userManager, 
+        IAuthenticationManager authManager, IRabbitMqService rabbitMqService)
     {
         _mapper = mapper;
         _userManager = userManager;
         _authManager = authManager;
+        _rabbitMqService = rabbitMqService;
     }
 
     [HttpGet("registerPage")]
@@ -58,6 +63,7 @@ public class AuthenticationController : Controller
         {
             return Unauthorized();
         }
+        _rabbitMqService.SendMessage(new { EventType = "UserLoggedIn", Username = user.UserName });
         return Ok();
     }
 }

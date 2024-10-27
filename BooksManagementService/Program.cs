@@ -1,4 +1,5 @@
 using BooksManagementService.Extensions;
+using BooksManagementService.RabbitMq;
 using Library_Web_Application.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddHostedService<RabbitMqListener>();
 
 var app = builder.Build();
 
