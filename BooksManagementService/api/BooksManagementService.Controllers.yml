@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: BooksManagementService.Controllers
+  commentId: N:BooksManagementService.Controllers
+  id: BooksManagementService.Controllers
+  children:
+  - BooksManagementService.Controllers.BooksController
+  langs:
+  - csharp
+  - vb
+  name: BooksManagementService.Controllers
+  nameWithType: BooksManagementService.Controllers
+  fullName: BooksManagementService.Controllers
+  type: Namespace
+  assemblies:
+  - BooksManagementService
+references:
+- uid: BooksManagementService.Controllers.BooksController
+  commentId: T:BooksManagementService.Controllers.BooksController
+  href: BooksManagementService.Controllers.BooksController.html
+  name: BooksController
+  nameWithType: BooksController
+  fullName: BooksManagementService.Controllers.BooksController

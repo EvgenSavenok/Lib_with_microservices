@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Entities.Configuration
+  commentId: N:Entities.Configuration
+  id: Entities.Configuration
+  children:
+  - Entities.Configuration.BookConfiguration
+  langs:
+  - csharp
+  - vb
+  name: Entities.Configuration
+  nameWithType: Entities.Configuration
+  fullName: Entities.Configuration
+  type: Namespace
+  assemblies:
+  - BooksManagementService
+references:
+- uid: Entities.Configuration.BookConfiguration
+  commentId: T:Entities.Configuration.BookConfiguration
+  href: Entities.Configuration.BookConfiguration.html
+  name: BookConfiguration
+  nameWithType: BookConfiguration
+  fullName: Entities.Configuration.BookConfiguration

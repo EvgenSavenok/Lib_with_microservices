@@ -9,6 +9,9 @@ using BookManagementSystemAuthorizationSystem.RabbitMq.Contracts;
 
 namespace BookManagementSystemAuthorizationSystem.Controllers;
 
+/// <summary>
+/// 
+/// </summary>
 [Route("api/authentication")]
 [ApiController]
 public class AuthenticationController : Controller

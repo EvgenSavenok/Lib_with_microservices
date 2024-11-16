@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Entities.ErrorModel
+  commentId: N:Entities.ErrorModel
+  id: Entities.ErrorModel
+  children:
+  - Entities.ErrorModel.ErrorDetails
+  langs:
+  - csharp
+  - vb
+  name: Entities.ErrorModel
+  nameWithType: Entities.ErrorModel
+  fullName: Entities.ErrorModel
+  type: Namespace
+  assemblies:
+  - BooksManagementService
+references:
+- uid: Entities.ErrorModel.ErrorDetails
+  commentId: T:Entities.ErrorModel.ErrorDetails
+  href: Entities.ErrorModel.ErrorDetails.html
+  name: ErrorDetails
+  nameWithType: ErrorDetails
+  fullName: Entities.ErrorModel.ErrorDetails

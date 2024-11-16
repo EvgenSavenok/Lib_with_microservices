@@ -1,0 +1,637 @@
+### YamlMime:ManagedReference
+items:
+- uid: BooksManagementService.DataTransferObjects.BookDto
+  commentId: T:BooksManagementService.DataTransferObjects.BookDto
+  id: BookDto
+  parent: BooksManagementService.DataTransferObjects
+  children:
+  - BooksManagementService.DataTransferObjects.BookDto.Amount
+  - BooksManagementService.DataTransferObjects.BookDto.AuthorLastName
+  - BooksManagementService.DataTransferObjects.BookDto.AuthorName
+  - BooksManagementService.DataTransferObjects.BookDto.BookTitle
+  - BooksManagementService.DataTransferObjects.BookDto.Description
+  - BooksManagementService.DataTransferObjects.BookDto.Genre
+  - BooksManagementService.DataTransferObjects.BookDto.ISBN
+  - BooksManagementService.DataTransferObjects.BookDto.Id
+  langs:
+  - csharp
+  - vb
+  name: BookDto
+  nameWithType: BookDto
+  fullName: BooksManagementService.DataTransferObjects.BookDto
+  type: Class
+  source:
+    remote:
+      path: BooksManagementService/DataTransferObjects/BookDto.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: BookDto
+    path: DataTransferObjects/BookDto.cs
+    startLine: 4
+  assemblies:
+  - BooksManagementService
+  namespace: BooksManagementService.DataTransferObjects
+  syntax:
+    content: public class BookDto
+    content.vb: Public Class BookDto
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BooksManagementService.DataTransferObjects.BookDto.Id
+  commentId: P:BooksManagementService.DataTransferObjects.BookDto.Id
+  id: Id
+  parent: BooksManagementService.DataTransferObjects.BookDto
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: BookDto.Id
+  fullName: BooksManagementService.DataTransferObjects.BookDto.Id
+  type: Property
+  source:
+    remote:
+      path: BooksManagementService/DataTransferObjects/BookDto.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: Id
+    path: DataTransferObjects/BookDto.cs
+    startLine: 6
+  assemblies:
+  - BooksManagementService
+  namespace: BooksManagementService.DataTransferObjects
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: BooksManagementService.DataTransferObjects.BookDto.Id*
+- uid: BooksManagementService.DataTransferObjects.BookDto.ISBN
+  commentId: P:BooksManagementService.DataTransferObjects.BookDto.ISBN
+  id: ISBN
+  parent: BooksManagementService.DataTransferObjects.BookDto
+  langs:
+  - csharp
+  - vb
+  name: ISBN
+  nameWithType: BookDto.ISBN
+  fullName: BooksManagementService.DataTransferObjects.BookDto.ISBN
+  type: Property
+  source:
+    remote:
+      path: BooksManagementService/DataTransferObjects/BookDto.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: ISBN
+    path: DataTransferObjects/BookDto.cs
+    startLine: 7
+  assemblies:
+  - BooksManagementService
+  namespace: BooksManagementService.DataTransferObjects
+  syntax:
+    content: public string ISBN { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ISBN As String
+  overload: BooksManagementService.DataTransferObjects.BookDto.ISBN*
+- uid: BooksManagementService.DataTransferObjects.BookDto.BookTitle
+  commentId: P:BooksManagementService.DataTransferObjects.BookDto.BookTitle
+  id: BookTitle
+  parent: BooksManagementService.DataTransferObjects.BookDto
+  langs:
+  - csharp
+  - vb
+  name: BookTitle
+  nameWithType: BookDto.BookTitle
+  fullName: BooksManagementService.DataTransferObjects.BookDto.BookTitle
+  type: Property
+  source:
+    remote:
+      path: BooksManagementService/DataTransferObjects/BookDto.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: BookTitle
+    path: DataTransferObjects/BookDto.cs
+    startLine: 8
+  assemblies:
+  - BooksManagementService
+  namespace: BooksManagementService.DataTransferObjects
+  syntax:
+    content: public string BookTitle { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BookTitle As String
+  overload: BooksManagementService.DataTransferObjects.BookDto.BookTitle*
+- uid: BooksManagementService.DataTransferObjects.BookDto.Genre
+  commentId: P:BooksManagementService.DataTransferObjects.BookDto.Genre
+  id: Genre
+  parent: BooksManagementService.DataTransferObjects.BookDto
+  langs:
+  - csharp
+  - vb
+  name: Genre
+  nameWithType: BookDto.Genre
+  fullName: BooksManagementService.DataTransferObjects.BookDto.Genre
+  type: Property
+  source:
+    remote:
+      path: BooksManagementService/DataTransferObjects/BookDto.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: Genre
+    path: DataTransferObjects/BookDto.cs
+    startLine: 9
+  assemblies:
+  - BooksManagementService
+  namespace: BooksManagementService.DataTransferObjects
+  syntax:
+    content: public BookGenre Genre { get; set; }
+    parameters: []
+    return:
+      type: BooksManagementService.Models.BookGenre
+    content.vb: Public Property Genre As BookGenre
+  overload: BooksManagementService.DataTransferObjects.BookDto.Genre*
+- uid: BooksManagementService.DataTransferObjects.BookDto.Description
+  commentId: P:BooksManagementService.DataTransferObjects.BookDto.Description
+  id: Description
+  parent: BooksManagementService.DataTransferObjects.BookDto
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: BookDto.Description
+  fullName: BooksManagementService.DataTransferObjects.BookDto.Description
+  type: Property
+  source:
+    remote:
+      path: BooksManagementService/DataTransferObjects/BookDto.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: Description
+    path: DataTransferObjects/BookDto.cs
+    startLine: 10
+  assemblies:
+  - BooksManagementService
+  namespace: BooksManagementService.DataTransferObjects
+  syntax:
+    content: public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: BooksManagementService.DataTransferObjects.BookDto.Description*
+- uid: BooksManagementService.DataTransferObjects.BookDto.AuthorName
+  commentId: P:BooksManagementService.DataTransferObjects.BookDto.AuthorName
+  id: AuthorName
+  parent: BooksManagementService.DataTransferObjects.BookDto
+  langs:
+  - csharp
+  - vb
+  name: AuthorName
+  nameWithType: BookDto.AuthorName
+  fullName: BooksManagementService.DataTransferObjects.BookDto.AuthorName
+  type: Property
+  source:
+    remote:
+      path: BooksManagementService/DataTransferObjects/BookDto.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: AuthorName
+    path: DataTransferObjects/BookDto.cs
+    startLine: 11
+  assemblies:
+  - BooksManagementService
+  namespace: BooksManagementService.DataTransferObjects
+  syntax:
+    content: public string AuthorName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AuthorName As String
+  overload: BooksManagementService.DataTransferObjects.BookDto.AuthorName*
+- uid: BooksManagementService.DataTransferObjects.BookDto.AuthorLastName
+  commentId: P:BooksManagementService.DataTransferObjects.BookDto.AuthorLastName
+  id: AuthorLastName
+  parent: BooksManagementService.DataTransferObjects.BookDto
+  langs:
+  - csharp
+  - vb
+  name: AuthorLastName
+  nameWithType: BookDto.AuthorLastName
+  fullName: BooksManagementService.DataTransferObjects.BookDto.AuthorLastName
+  type: Property
+  source:
+    remote:
+      path: BooksManagementService/DataTransferObjects/BookDto.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: AuthorLastName
+    path: DataTransferObjects/BookDto.cs
+    startLine: 12
+  assemblies:
+  - BooksManagementService
+  namespace: BooksManagementService.DataTransferObjects
+  syntax:
+    content: public string AuthorLastName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AuthorLastName As String
+  overload: BooksManagementService.DataTransferObjects.BookDto.AuthorLastName*
+- uid: BooksManagementService.DataTransferObjects.BookDto.Amount
+  commentId: P:BooksManagementService.DataTransferObjects.BookDto.Amount
+  id: Amount
+  parent: BooksManagementService.DataTransferObjects.BookDto
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: BookDto.Amount
+  fullName: BooksManagementService.DataTransferObjects.BookDto.Amount
+  type: Property
+  source:
+    remote:
+      path: BooksManagementService/DataTransferObjects/BookDto.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: Amount
+    path: DataTransferObjects/BookDto.cs
+    startLine: 13
+  assemblies:
+  - BooksManagementService
+  namespace: BooksManagementService.DataTransferObjects
+  syntax:
+    content: public int Amount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Amount As Integer
+  overload: BooksManagementService.DataTransferObjects.BookDto.Amount*
+references:
+- uid: BooksManagementService.DataTransferObjects
+  commentId: N:BooksManagementService.DataTransferObjects
+  href: BooksManagementService.html
+  name: BooksManagementService.DataTransferObjects
+  nameWithType: BooksManagementService.DataTransferObjects
+  fullName: BooksManagementService.DataTransferObjects
+  spec.csharp:
+  - uid: BooksManagementService
+    name: BooksManagementService
+    href: BooksManagementService.html
+  - name: .
+  - uid: BooksManagementService.DataTransferObjects
+    name: DataTransferObjects
+    href: BooksManagementService.DataTransferObjects.html
+  spec.vb:
+  - uid: BooksManagementService
+    name: BooksManagementService
+    href: BooksManagementService.html
+  - name: .
+  - uid: BooksManagementService.DataTransferObjects
+    name: DataTransferObjects
+    href: BooksManagementService.DataTransferObjects.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BooksManagementService.DataTransferObjects.BookDto.Id*
+  commentId: Overload:BooksManagementService.DataTransferObjects.BookDto.Id
+  href: BooksManagementService.DataTransferObjects.BookDto.html#BooksManagementService_DataTransferObjects_BookDto_Id
+  name: Id
+  nameWithType: BookDto.Id
+  fullName: BooksManagementService.DataTransferObjects.BookDto.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: BooksManagementService.DataTransferObjects.BookDto.ISBN*
+  commentId: Overload:BooksManagementService.DataTransferObjects.BookDto.ISBN
+  href: BooksManagementService.DataTransferObjects.BookDto.html#BooksManagementService_DataTransferObjects_BookDto_ISBN
+  name: ISBN
+  nameWithType: BookDto.ISBN
+  fullName: BooksManagementService.DataTransferObjects.BookDto.ISBN
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BooksManagementService.DataTransferObjects.BookDto.BookTitle*
+  commentId: Overload:BooksManagementService.DataTransferObjects.BookDto.BookTitle
+  href: BooksManagementService.DataTransferObjects.BookDto.html#BooksManagementService_DataTransferObjects_BookDto_BookTitle
+  name: BookTitle
+  nameWithType: BookDto.BookTitle
+  fullName: BooksManagementService.DataTransferObjects.BookDto.BookTitle
+- uid: BooksManagementService.DataTransferObjects.BookDto.Genre*
+  commentId: Overload:BooksManagementService.DataTransferObjects.BookDto.Genre
+  href: BooksManagementService.DataTransferObjects.BookDto.html#BooksManagementService_DataTransferObjects_BookDto_Genre
+  name: Genre
+  nameWithType: BookDto.Genre
+  fullName: BooksManagementService.DataTransferObjects.BookDto.Genre
+- uid: BooksManagementService.Models.BookGenre
+  commentId: T:BooksManagementService.Models.BookGenre
+  parent: BooksManagementService.Models
+  href: BooksManagementService.Models.BookGenre.html
+  name: BookGenre
+  nameWithType: BookGenre
+  fullName: BooksManagementService.Models.BookGenre
+- uid: BooksManagementService.Models
+  commentId: N:BooksManagementService.Models
+  href: BooksManagementService.html
+  name: BooksManagementService.Models
+  nameWithType: BooksManagementService.Models
+  fullName: BooksManagementService.Models
+  spec.csharp:
+  - uid: BooksManagementService
+    name: BooksManagementService
+    href: BooksManagementService.html
+  - name: .
+  - uid: BooksManagementService.Models
+    name: Models
+    href: BooksManagementService.Models.html
+  spec.vb:
+  - uid: BooksManagementService
+    name: BooksManagementService
+    href: BooksManagementService.html
+  - name: .
+  - uid: BooksManagementService.Models
+    name: Models
+    href: BooksManagementService.Models.html
+- uid: BooksManagementService.DataTransferObjects.BookDto.Description*
+  commentId: Overload:BooksManagementService.DataTransferObjects.BookDto.Description
+  href: BooksManagementService.DataTransferObjects.BookDto.html#BooksManagementService_DataTransferObjects_BookDto_Description
+  name: Description
+  nameWithType: BookDto.Description
+  fullName: BooksManagementService.DataTransferObjects.BookDto.Description
+- uid: BooksManagementService.DataTransferObjects.BookDto.AuthorName*
+  commentId: Overload:BooksManagementService.DataTransferObjects.BookDto.AuthorName
+  href: BooksManagementService.DataTransferObjects.BookDto.html#BooksManagementService_DataTransferObjects_BookDto_AuthorName
+  name: AuthorName
+  nameWithType: BookDto.AuthorName
+  fullName: BooksManagementService.DataTransferObjects.BookDto.AuthorName
+- uid: BooksManagementService.DataTransferObjects.BookDto.AuthorLastName*
+  commentId: Overload:BooksManagementService.DataTransferObjects.BookDto.AuthorLastName
+  href: BooksManagementService.DataTransferObjects.BookDto.html#BooksManagementService_DataTransferObjects_BookDto_AuthorLastName
+  name: AuthorLastName
+  nameWithType: BookDto.AuthorLastName
+  fullName: BooksManagementService.DataTransferObjects.BookDto.AuthorLastName
+- uid: BooksManagementService.DataTransferObjects.BookDto.Amount*
+  commentId: Overload:BooksManagementService.DataTransferObjects.BookDto.Amount
+  href: BooksManagementService.DataTransferObjects.BookDto.html#BooksManagementService_DataTransferObjects_BookDto_Amount
+  name: Amount
+  nameWithType: BookDto.Amount
+  fullName: BooksManagementService.DataTransferObjects.BookDto.Amount

@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: BooksManagementService.Models
+  commentId: N:BooksManagementService.Models
+  id: BooksManagementService.Models
+  children:
+  - BooksManagementService.Models.Book
+  - BooksManagementService.Models.BookGenre
+  langs:
+  - csharp
+  - vb
+  name: BooksManagementService.Models
+  nameWithType: BooksManagementService.Models
+  fullName: BooksManagementService.Models
+  type: Namespace
+  assemblies:
+  - BooksManagementService
+references:
+- uid: BooksManagementService.Models.BookGenre
+  commentId: T:BooksManagementService.Models.BookGenre
+  parent: BooksManagementService.Models
+  href: BooksManagementService.Models.BookGenre.html
+  name: BookGenre
+  nameWithType: BookGenre
+  fullName: BooksManagementService.Models.BookGenre
+- uid: BooksManagementService.Models.Book
+  commentId: T:BooksManagementService.Models.Book
+  parent: BooksManagementService.Models
+  href: BooksManagementService.Models.Book.html
+  name: Book
+  nameWithType: Book
+  fullName: BooksManagementService.Models.Book
+- uid: BooksManagementService.Models
+  commentId: N:BooksManagementService.Models
+  href: BooksManagementService.html
+  name: BooksManagementService.Models
+  nameWithType: BooksManagementService.Models
+  fullName: BooksManagementService.Models
+  spec.csharp:
+  - uid: BooksManagementService
+    name: BooksManagementService
+    href: BooksManagementService.html
+  - name: .
+  - uid: BooksManagementService.Models
+    name: Models
+    href: BooksManagementService.Models.html
+  spec.vb:
+  - uid: BooksManagementService
+    name: BooksManagementService
+    href: BooksManagementService.html
+  - name: .
+  - uid: BooksManagementService.Models
+    name: Models
+    href: BooksManagementService.Models.html

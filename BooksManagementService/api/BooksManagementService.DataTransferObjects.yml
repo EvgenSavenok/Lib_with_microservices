@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: BooksManagementService.DataTransferObjects
+  commentId: N:BooksManagementService.DataTransferObjects
+  id: BooksManagementService.DataTransferObjects
+  children:
+  - BooksManagementService.DataTransferObjects.BookDto
+  - BooksManagementService.DataTransferObjects.BookForCreationDto
+  - BooksManagementService.DataTransferObjects.BookForUpdateDto
+  langs:
+  - csharp
+  - vb
+  name: BooksManagementService.DataTransferObjects
+  nameWithType: BooksManagementService.DataTransferObjects
+  fullName: BooksManagementService.DataTransferObjects
+  type: Namespace
+  assemblies:
+  - BooksManagementService
+references:
+- uid: BooksManagementService.DataTransferObjects.BookDto
+  commentId: T:BooksManagementService.DataTransferObjects.BookDto
+  href: BooksManagementService.DataTransferObjects.BookDto.html
+  name: BookDto
+  nameWithType: BookDto
+  fullName: BooksManagementService.DataTransferObjects.BookDto
+- uid: BooksManagementService.DataTransferObjects.BookForCreationDto
+  commentId: T:BooksManagementService.DataTransferObjects.BookForCreationDto
+  parent: BooksManagementService.DataTransferObjects
+  href: BooksManagementService.DataTransferObjects.BookForCreationDto.html
+  name: BookForCreationDto
+  nameWithType: BookForCreationDto
+  fullName: BooksManagementService.DataTransferObjects.BookForCreationDto
+- uid: BooksManagementService.DataTransferObjects.BookForUpdateDto
+  commentId: T:BooksManagementService.DataTransferObjects.BookForUpdateDto
+  parent: BooksManagementService.DataTransferObjects
+  href: BooksManagementService.DataTransferObjects.BookForUpdateDto.html
+  name: BookForUpdateDto
+  nameWithType: BookForUpdateDto
+  fullName: BooksManagementService.DataTransferObjects.BookForUpdateDto
+- uid: BooksManagementService.DataTransferObjects
+  commentId: N:BooksManagementService.DataTransferObjects
+  href: BooksManagementService.html
+  name: BooksManagementService.DataTransferObjects
+  nameWithType: BooksManagementService.DataTransferObjects
+  fullName: BooksManagementService.DataTransferObjects
+  spec.csharp:
+  - uid: BooksManagementService
+    name: BooksManagementService
+    href: BooksManagementService.html
+  - name: .
+  - uid: BooksManagementService.DataTransferObjects
+    name: DataTransferObjects
+    href: BooksManagementService.DataTransferObjects.html
+  spec.vb:
+  - uid: BooksManagementService
+    name: BooksManagementService
+    href: BooksManagementService.html
+  - name: .
+  - uid: BooksManagementService.DataTransferObjects
+    name: DataTransferObjects
+    href: BooksManagementService.DataTransferObjects.html

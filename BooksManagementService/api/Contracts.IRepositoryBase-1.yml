@@ -1,0 +1,480 @@
+### YamlMime:ManagedReference
+items:
+- uid: Contracts.IRepositoryBase`1
+  commentId: T:Contracts.IRepositoryBase`1
+  id: IRepositoryBase`1
+  parent: Contracts
+  children:
+  - Contracts.IRepositoryBase`1.Create(`0)
+  - Contracts.IRepositoryBase`1.Delete(`0)
+  - Contracts.IRepositoryBase`1.FindAll(System.Boolean)
+  - Contracts.IRepositoryBase`1.FindByCondition(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean)
+  - Contracts.IRepositoryBase`1.Update(`0)
+  langs:
+  - csharp
+  - vb
+  name: IRepositoryBase<T>
+  nameWithType: IRepositoryBase<T>
+  fullName: Contracts.IRepositoryBase<T>
+  type: Interface
+  source:
+    remote:
+      path: BooksManagementService/Contracts/IRepositoryBase.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: IRepositoryBase
+    path: Contracts/IRepositoryBase.cs
+    startLine: 4
+  assemblies:
+  - BooksManagementService
+  namespace: Contracts
+  syntax:
+    content: public interface IRepositoryBase<T>
+    typeParameters:
+    - id: T
+    content.vb: Public Interface IRepositoryBase(Of T)
+  nameWithType.vb: IRepositoryBase(Of T)
+  fullName.vb: Contracts.IRepositoryBase(Of T)
+  name.vb: IRepositoryBase(Of T)
+- uid: Contracts.IRepositoryBase`1.FindAll(System.Boolean)
+  commentId: M:Contracts.IRepositoryBase`1.FindAll(System.Boolean)
+  id: FindAll(System.Boolean)
+  parent: Contracts.IRepositoryBase`1
+  langs:
+  - csharp
+  - vb
+  name: FindAll(bool)
+  nameWithType: IRepositoryBase<T>.FindAll(bool)
+  fullName: Contracts.IRepositoryBase<T>.FindAll(bool)
+  type: Method
+  source:
+    remote:
+      path: BooksManagementService/Contracts/IRepositoryBase.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: FindAll
+    path: Contracts/IRepositoryBase.cs
+    startLine: 6
+  assemblies:
+  - BooksManagementService
+  namespace: Contracts
+  syntax:
+    content: IQueryable<T> FindAll(bool trackChanges)
+    parameters:
+    - id: trackChanges
+      type: System.Boolean
+    return:
+      type: System.Linq.IQueryable{{T}}
+    content.vb: Function FindAll(trackChanges As Boolean) As IQueryable(Of T)
+  overload: Contracts.IRepositoryBase`1.FindAll*
+  nameWithType.vb: IRepositoryBase(Of T).FindAll(Boolean)
+  fullName.vb: Contracts.IRepositoryBase(Of T).FindAll(Boolean)
+  name.vb: FindAll(Boolean)
+- uid: Contracts.IRepositoryBase`1.FindByCondition(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean)
+  commentId: M:Contracts.IRepositoryBase`1.FindByCondition(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean)
+  id: FindByCondition(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean)
+  parent: Contracts.IRepositoryBase`1
+  langs:
+  - csharp
+  - vb
+  name: FindByCondition(Expression<Func<T, bool>>, bool)
+  nameWithType: IRepositoryBase<T>.FindByCondition(Expression<Func<T, bool>>, bool)
+  fullName: Contracts.IRepositoryBase<T>.FindByCondition(System.Linq.Expressions.Expression<System.Func<T, bool>>, bool)
+  type: Method
+  source:
+    remote:
+      path: BooksManagementService/Contracts/IRepositoryBase.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: FindByCondition
+    path: Contracts/IRepositoryBase.cs
+    startLine: 7
+  assemblies:
+  - BooksManagementService
+  namespace: Contracts
+  syntax:
+    content: IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool trackChanges)
+    parameters:
+    - id: expression
+      type: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+    - id: trackChanges
+      type: System.Boolean
+    return:
+      type: System.Linq.IQueryable{{T}}
+    content.vb: Function FindByCondition(expression As Expression(Of Func(Of T, Boolean)), trackChanges As Boolean) As IQueryable(Of T)
+  overload: Contracts.IRepositoryBase`1.FindByCondition*
+  nameWithType.vb: IRepositoryBase(Of T).FindByCondition(Expression(Of Func(Of T, Boolean)), Boolean)
+  fullName.vb: Contracts.IRepositoryBase(Of T).FindByCondition(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)), Boolean)
+  name.vb: FindByCondition(Expression(Of Func(Of T, Boolean)), Boolean)
+- uid: Contracts.IRepositoryBase`1.Create(`0)
+  commentId: M:Contracts.IRepositoryBase`1.Create(`0)
+  id: Create(`0)
+  parent: Contracts.IRepositoryBase`1
+  langs:
+  - csharp
+  - vb
+  name: Create(T)
+  nameWithType: IRepositoryBase<T>.Create(T)
+  fullName: Contracts.IRepositoryBase<T>.Create(T)
+  type: Method
+  source:
+    remote:
+      path: BooksManagementService/Contracts/IRepositoryBase.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: Create
+    path: Contracts/IRepositoryBase.cs
+    startLine: 9
+  assemblies:
+  - BooksManagementService
+  namespace: Contracts
+  syntax:
+    content: void Create(T entity)
+    parameters:
+    - id: entity
+      type: '{T}'
+    content.vb: Sub Create(entity As T)
+  overload: Contracts.IRepositoryBase`1.Create*
+  nameWithType.vb: IRepositoryBase(Of T).Create(T)
+  fullName.vb: Contracts.IRepositoryBase(Of T).Create(T)
+- uid: Contracts.IRepositoryBase`1.Update(`0)
+  commentId: M:Contracts.IRepositoryBase`1.Update(`0)
+  id: Update(`0)
+  parent: Contracts.IRepositoryBase`1
+  langs:
+  - csharp
+  - vb
+  name: Update(T)
+  nameWithType: IRepositoryBase<T>.Update(T)
+  fullName: Contracts.IRepositoryBase<T>.Update(T)
+  type: Method
+  source:
+    remote:
+      path: BooksManagementService/Contracts/IRepositoryBase.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: Update
+    path: Contracts/IRepositoryBase.cs
+    startLine: 10
+  assemblies:
+  - BooksManagementService
+  namespace: Contracts
+  syntax:
+    content: void Update(T entity)
+    parameters:
+    - id: entity
+      type: '{T}'
+    content.vb: Sub Update(entity As T)
+  overload: Contracts.IRepositoryBase`1.Update*
+  nameWithType.vb: IRepositoryBase(Of T).Update(T)
+  fullName.vb: Contracts.IRepositoryBase(Of T).Update(T)
+- uid: Contracts.IRepositoryBase`1.Delete(`0)
+  commentId: M:Contracts.IRepositoryBase`1.Delete(`0)
+  id: Delete(`0)
+  parent: Contracts.IRepositoryBase`1
+  langs:
+  - csharp
+  - vb
+  name: Delete(T)
+  nameWithType: IRepositoryBase<T>.Delete(T)
+  fullName: Contracts.IRepositoryBase<T>.Delete(T)
+  type: Method
+  source:
+    remote:
+      path: BooksManagementService/Contracts/IRepositoryBase.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: Delete
+    path: Contracts/IRepositoryBase.cs
+    startLine: 11
+  assemblies:
+  - BooksManagementService
+  namespace: Contracts
+  syntax:
+    content: void Delete(T entity)
+    parameters:
+    - id: entity
+      type: '{T}'
+    content.vb: Sub Delete(entity As T)
+  overload: Contracts.IRepositoryBase`1.Delete*
+  nameWithType.vb: IRepositoryBase(Of T).Delete(T)
+  fullName.vb: Contracts.IRepositoryBase(Of T).Delete(T)
+references:
+- uid: Contracts
+  commentId: N:Contracts
+  href: Contracts.html
+  name: Contracts
+  nameWithType: Contracts
+  fullName: Contracts
+- uid: Contracts.IRepositoryBase`1.FindAll*
+  commentId: Overload:Contracts.IRepositoryBase`1.FindAll
+  href: Contracts.IRepositoryBase-1.html#Contracts_IRepositoryBase_1_FindAll_System_Boolean_
+  name: FindAll
+  nameWithType: IRepositoryBase<T>.FindAll
+  fullName: Contracts.IRepositoryBase<T>.FindAll
+  nameWithType.vb: IRepositoryBase(Of T).FindAll
+  fullName.vb: Contracts.IRepositoryBase(Of T).FindAll
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Linq.IQueryable{{T}}
+  commentId: T:System.Linq.IQueryable{`0}
+  parent: System.Linq
+  definition: System.Linq.IQueryable`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  name: IQueryable<T>
+  nameWithType: IQueryable<T>
+  fullName: System.Linq.IQueryable<T>
+  nameWithType.vb: IQueryable(Of T)
+  fullName.vb: System.Linq.IQueryable(Of T)
+  name.vb: IQueryable(Of T)
+  spec.csharp:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Linq.IQueryable`1
+  commentId: T:System.Linq.IQueryable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  name: IQueryable<T>
+  nameWithType: IQueryable<T>
+  fullName: System.Linq.IQueryable<T>
+  nameWithType.vb: IQueryable(Of T)
+  fullName.vb: System.Linq.IQueryable(Of T)
+  name.vb: IQueryable(Of T)
+  spec.csharp:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Linq
+  commentId: N:System.Linq
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq
+  nameWithType: System.Linq
+  fullName: System.Linq
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+- uid: Contracts.IRepositoryBase`1.FindByCondition*
+  commentId: Overload:Contracts.IRepositoryBase`1.FindByCondition
+  href: Contracts.IRepositoryBase-1.html#Contracts_IRepositoryBase_1_FindByCondition_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___System_Boolean_
+  name: FindByCondition
+  nameWithType: IRepositoryBase<T>.FindByCondition
+  fullName: Contracts.IRepositoryBase<T>.FindByCondition
+  nameWithType.vb: IRepositoryBase(Of T).FindByCondition
+  fullName.vb: Contracts.IRepositoryBase(Of T).FindByCondition
+- uid: System.Linq.Expressions.Expression{System.Func{{T},System.Boolean}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<T, bool>>
+  nameWithType: Expression<Func<T, bool>>
+  fullName: System.Linq.Expressions.Expression<System.Func<T, bool>>
+  nameWithType.vb: Expression(Of Func(Of T, Boolean))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean))
+  name.vb: Expression(Of Func(Of T, Boolean))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: System.Linq.Expressions.Expression`1
+  commentId: T:System.Linq.Expressions.Expression`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<TDelegate>
+  nameWithType: Expression<TDelegate>
+  fullName: System.Linq.Expressions.Expression<TDelegate>
+  nameWithType.vb: Expression(Of TDelegate)
+  fullName.vb: System.Linq.Expressions.Expression(Of TDelegate)
+  name.vb: Expression(Of TDelegate)
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - name: TDelegate
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDelegate
+  - name: )
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+- uid: Contracts.IRepositoryBase`1.Create*
+  commentId: Overload:Contracts.IRepositoryBase`1.Create
+  href: Contracts.IRepositoryBase-1.html#Contracts_IRepositoryBase_1_Create__0_
+  name: Create
+  nameWithType: IRepositoryBase<T>.Create
+  fullName: Contracts.IRepositoryBase<T>.Create
+  nameWithType.vb: IRepositoryBase(Of T).Create
+  fullName.vb: Contracts.IRepositoryBase(Of T).Create
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Contracts.IRepositoryBase`1.Update*
+  commentId: Overload:Contracts.IRepositoryBase`1.Update
+  href: Contracts.IRepositoryBase-1.html#Contracts_IRepositoryBase_1_Update__0_
+  name: Update
+  nameWithType: IRepositoryBase<T>.Update
+  fullName: Contracts.IRepositoryBase<T>.Update
+  nameWithType.vb: IRepositoryBase(Of T).Update
+  fullName.vb: Contracts.IRepositoryBase(Of T).Update
+- uid: Contracts.IRepositoryBase`1.Delete*
+  commentId: Overload:Contracts.IRepositoryBase`1.Delete
+  href: Contracts.IRepositoryBase-1.html#Contracts_IRepositoryBase_1_Delete__0_
+  name: Delete
+  nameWithType: IRepositoryBase<T>.Delete
+  fullName: Contracts.IRepositoryBase<T>.Delete
+  nameWithType.vb: IRepositoryBase(Of T).Delete
+  fullName.vb: Contracts.IRepositoryBase(Of T).Delete

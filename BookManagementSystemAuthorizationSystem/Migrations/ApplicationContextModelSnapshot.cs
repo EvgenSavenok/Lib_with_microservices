@@ -122,13 +122,13 @@ namespace BookManagementSystemAuthorizationSystem.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ede4444c-840a-47ef-8f45-bbcfd22a5c9e",
+                            Id = "0f502d4a-3f71-4f4f-bc04-49204f4ce949",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "479169d6-3534-432a-84fa-7940ad58411f",
+                            Id = "ed6bae9e-c3a1-4007-9a1e-dff24c4f7708",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });

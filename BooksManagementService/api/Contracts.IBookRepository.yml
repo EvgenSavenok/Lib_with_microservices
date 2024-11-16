@@ -1,0 +1,552 @@
+### YamlMime:ManagedReference
+items:
+- uid: Contracts.IBookRepository
+  commentId: T:Contracts.IBookRepository
+  id: IBookRepository
+  parent: Contracts
+  children:
+  - Contracts.IBookRepository.CountBooksAsync(Entities.RequestFeatures.BookParameters)
+  - Contracts.IBookRepository.CreateBook(BooksManagementService.Models.Book)
+  - Contracts.IBookRepository.DeleteBook(BooksManagementService.Models.Book)
+  - Contracts.IBookRepository.GetAllBooksAsync(Entities.RequestFeatures.BookParameters,System.Boolean)
+  - Contracts.IBookRepository.GetBookAsync(System.Int32,System.Boolean)
+  - Contracts.IBookRepository.GetBookByISBNAsync(System.String,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: IBookRepository
+  nameWithType: IBookRepository
+  fullName: Contracts.IBookRepository
+  type: Interface
+  source:
+    remote:
+      path: BooksManagementService/Contracts/IBookRepository.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: IBookRepository
+    path: Contracts/IBookRepository.cs
+    startLine: 5
+  assemblies:
+  - BooksManagementService
+  namespace: Contracts
+  syntax:
+    content: public interface IBookRepository
+    content.vb: Public Interface IBookRepository
+- uid: Contracts.IBookRepository.GetAllBooksAsync(Entities.RequestFeatures.BookParameters,System.Boolean)
+  commentId: M:Contracts.IBookRepository.GetAllBooksAsync(Entities.RequestFeatures.BookParameters,System.Boolean)
+  id: GetAllBooksAsync(Entities.RequestFeatures.BookParameters,System.Boolean)
+  parent: Contracts.IBookRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllBooksAsync(BookParameters, bool)
+  nameWithType: IBookRepository.GetAllBooksAsync(BookParameters, bool)
+  fullName: Contracts.IBookRepository.GetAllBooksAsync(Entities.RequestFeatures.BookParameters, bool)
+  type: Method
+  source:
+    remote:
+      path: BooksManagementService/Contracts/IBookRepository.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: GetAllBooksAsync
+    path: Contracts/IBookRepository.cs
+    startLine: 7
+  assemblies:
+  - BooksManagementService
+  namespace: Contracts
+  syntax:
+    content: Task<IEnumerable<Book>> GetAllBooksAsync(BookParameters bookParameters, bool trackChanges)
+    parameters:
+    - id: bookParameters
+      type: Entities.RequestFeatures.BookParameters
+    - id: trackChanges
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BooksManagementService.Models.Book}}
+    content.vb: Function GetAllBooksAsync(bookParameters As BookParameters, trackChanges As Boolean) As Task(Of IEnumerable(Of Book))
+  overload: Contracts.IBookRepository.GetAllBooksAsync*
+  nameWithType.vb: IBookRepository.GetAllBooksAsync(BookParameters, Boolean)
+  fullName.vb: Contracts.IBookRepository.GetAllBooksAsync(Entities.RequestFeatures.BookParameters, Boolean)
+  name.vb: GetAllBooksAsync(BookParameters, Boolean)
+- uid: Contracts.IBookRepository.GetBookAsync(System.Int32,System.Boolean)
+  commentId: M:Contracts.IBookRepository.GetBookAsync(System.Int32,System.Boolean)
+  id: GetBookAsync(System.Int32,System.Boolean)
+  parent: Contracts.IBookRepository
+  langs:
+  - csharp
+  - vb
+  name: GetBookAsync(int, bool)
+  nameWithType: IBookRepository.GetBookAsync(int, bool)
+  fullName: Contracts.IBookRepository.GetBookAsync(int, bool)
+  type: Method
+  source:
+    remote:
+      path: BooksManagementService/Contracts/IBookRepository.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: GetBookAsync
+    path: Contracts/IBookRepository.cs
+    startLine: 8
+  assemblies:
+  - BooksManagementService
+  namespace: Contracts
+  syntax:
+    content: Task<Book> GetBookAsync(int bookId, bool trackChanges)
+    parameters:
+    - id: bookId
+      type: System.Int32
+    - id: trackChanges
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{BooksManagementService.Models.Book}
+    content.vb: Function GetBookAsync(bookId As Integer, trackChanges As Boolean) As Task(Of Book)
+  overload: Contracts.IBookRepository.GetBookAsync*
+  nameWithType.vb: IBookRepository.GetBookAsync(Integer, Boolean)
+  fullName.vb: Contracts.IBookRepository.GetBookAsync(Integer, Boolean)
+  name.vb: GetBookAsync(Integer, Boolean)
+- uid: Contracts.IBookRepository.GetBookByISBNAsync(System.String,System.Boolean)
+  commentId: M:Contracts.IBookRepository.GetBookByISBNAsync(System.String,System.Boolean)
+  id: GetBookByISBNAsync(System.String,System.Boolean)
+  parent: Contracts.IBookRepository
+  langs:
+  - csharp
+  - vb
+  name: GetBookByISBNAsync(string, bool)
+  nameWithType: IBookRepository.GetBookByISBNAsync(string, bool)
+  fullName: Contracts.IBookRepository.GetBookByISBNAsync(string, bool)
+  type: Method
+  source:
+    remote:
+      path: BooksManagementService/Contracts/IBookRepository.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: GetBookByISBNAsync
+    path: Contracts/IBookRepository.cs
+    startLine: 9
+  assemblies:
+  - BooksManagementService
+  namespace: Contracts
+  syntax:
+    content: Task<Book> GetBookByISBNAsync(string bookIsbn, bool trackChanges)
+    parameters:
+    - id: bookIsbn
+      type: System.String
+    - id: trackChanges
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{BooksManagementService.Models.Book}
+    content.vb: Function GetBookByISBNAsync(bookIsbn As String, trackChanges As Boolean) As Task(Of Book)
+  overload: Contracts.IBookRepository.GetBookByISBNAsync*
+  nameWithType.vb: IBookRepository.GetBookByISBNAsync(String, Boolean)
+  fullName.vb: Contracts.IBookRepository.GetBookByISBNAsync(String, Boolean)
+  name.vb: GetBookByISBNAsync(String, Boolean)
+- uid: Contracts.IBookRepository.CountBooksAsync(Entities.RequestFeatures.BookParameters)
+  commentId: M:Contracts.IBookRepository.CountBooksAsync(Entities.RequestFeatures.BookParameters)
+  id: CountBooksAsync(Entities.RequestFeatures.BookParameters)
+  parent: Contracts.IBookRepository
+  langs:
+  - csharp
+  - vb
+  name: CountBooksAsync(BookParameters)
+  nameWithType: IBookRepository.CountBooksAsync(BookParameters)
+  fullName: Contracts.IBookRepository.CountBooksAsync(Entities.RequestFeatures.BookParameters)
+  type: Method
+  source:
+    remote:
+      path: BooksManagementService/Contracts/IBookRepository.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: CountBooksAsync
+    path: Contracts/IBookRepository.cs
+    startLine: 10
+  assemblies:
+  - BooksManagementService
+  namespace: Contracts
+  syntax:
+    content: Task<int> CountBooksAsync(BookParameters requestParameters)
+    parameters:
+    - id: requestParameters
+      type: Entities.RequestFeatures.BookParameters
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+    content.vb: Function CountBooksAsync(requestParameters As BookParameters) As Task(Of Integer)
+  overload: Contracts.IBookRepository.CountBooksAsync*
+- uid: Contracts.IBookRepository.CreateBook(BooksManagementService.Models.Book)
+  commentId: M:Contracts.IBookRepository.CreateBook(BooksManagementService.Models.Book)
+  id: CreateBook(BooksManagementService.Models.Book)
+  parent: Contracts.IBookRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateBook(Book)
+  nameWithType: IBookRepository.CreateBook(Book)
+  fullName: Contracts.IBookRepository.CreateBook(BooksManagementService.Models.Book)
+  type: Method
+  source:
+    remote:
+      path: BooksManagementService/Contracts/IBookRepository.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: CreateBook
+    path: Contracts/IBookRepository.cs
+    startLine: 11
+  assemblies:
+  - BooksManagementService
+  namespace: Contracts
+  syntax:
+    content: void CreateBook(Book book)
+    parameters:
+    - id: book
+      type: BooksManagementService.Models.Book
+    content.vb: Sub CreateBook(book As Book)
+  overload: Contracts.IBookRepository.CreateBook*
+- uid: Contracts.IBookRepository.DeleteBook(BooksManagementService.Models.Book)
+  commentId: M:Contracts.IBookRepository.DeleteBook(BooksManagementService.Models.Book)
+  id: DeleteBook(BooksManagementService.Models.Book)
+  parent: Contracts.IBookRepository
+  langs:
+  - csharp
+  - vb
+  name: DeleteBook(Book)
+  nameWithType: IBookRepository.DeleteBook(Book)
+  fullName: Contracts.IBookRepository.DeleteBook(BooksManagementService.Models.Book)
+  type: Method
+  source:
+    remote:
+      path: BooksManagementService/Contracts/IBookRepository.cs
+      branch: master
+      repo: https://github.com/EvgenSavenok/Lib_with_microservices.git
+    id: DeleteBook
+    path: Contracts/IBookRepository.cs
+    startLine: 12
+  assemblies:
+  - BooksManagementService
+  namespace: Contracts
+  syntax:
+    content: void DeleteBook(Book book)
+    parameters:
+    - id: book
+      type: BooksManagementService.Models.Book
+    content.vb: Sub DeleteBook(book As Book)
+  overload: Contracts.IBookRepository.DeleteBook*
+references:
+- uid: Contracts
+  commentId: N:Contracts
+  href: Contracts.html
+  name: Contracts
+  nameWithType: Contracts
+  fullName: Contracts
+- uid: Contracts.IBookRepository.GetAllBooksAsync*
+  commentId: Overload:Contracts.IBookRepository.GetAllBooksAsync
+  href: Contracts.IBookRepository.html#Contracts_IBookRepository_GetAllBooksAsync_Entities_RequestFeatures_BookParameters_System_Boolean_
+  name: GetAllBooksAsync
+  nameWithType: IBookRepository.GetAllBooksAsync
+  fullName: Contracts.IBookRepository.GetAllBooksAsync
+- uid: Entities.RequestFeatures.BookParameters
+  commentId: T:Entities.RequestFeatures.BookParameters
+  parent: Entities.RequestFeatures
+  href: Entities.RequestFeatures.BookParameters.html
+  name: BookParameters
+  nameWithType: BookParameters
+  fullName: Entities.RequestFeatures.BookParameters
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BooksManagementService.Models.Book}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BooksManagementService.Models.Book}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<Book>>
+  nameWithType: Task<IEnumerable<Book>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<BooksManagementService.Models.Book>>
+  nameWithType.vb: Task(Of IEnumerable(Of Book))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of BooksManagementService.Models.Book))
+  name.vb: Task(Of IEnumerable(Of Book))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: BooksManagementService.Models.Book
+    name: Book
+    href: BooksManagementService.Models.Book.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BooksManagementService.Models.Book
+    name: Book
+    href: BooksManagementService.Models.Book.html
+  - name: )
+  - name: )
+- uid: Entities.RequestFeatures
+  commentId: N:Entities.RequestFeatures
+  href: Entities.html
+  name: Entities.RequestFeatures
+  nameWithType: Entities.RequestFeatures
+  fullName: Entities.RequestFeatures
+  spec.csharp:
+  - uid: Entities
+    name: Entities
+    href: Entities.html
+  - name: .
+  - uid: Entities.RequestFeatures
+    name: RequestFeatures
+    href: Entities.RequestFeatures.html
+  spec.vb:
+  - uid: Entities
+    name: Entities
+    href: Entities.html
+  - name: .
+  - uid: Entities.RequestFeatures
+    name: RequestFeatures
+    href: Entities.RequestFeatures.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Contracts.IBookRepository.GetBookAsync*
+  commentId: Overload:Contracts.IBookRepository.GetBookAsync
+  href: Contracts.IBookRepository.html#Contracts_IBookRepository_GetBookAsync_System_Int32_System_Boolean_
+  name: GetBookAsync
+  nameWithType: IBookRepository.GetBookAsync
+  fullName: Contracts.IBookRepository.GetBookAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{BooksManagementService.Models.Book}
+  commentId: T:System.Threading.Tasks.Task{BooksManagementService.Models.Book}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Book>
+  nameWithType: Task<Book>
+  fullName: System.Threading.Tasks.Task<BooksManagementService.Models.Book>
+  nameWithType.vb: Task(Of Book)
+  fullName.vb: System.Threading.Tasks.Task(Of BooksManagementService.Models.Book)
+  name.vb: Task(Of Book)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BooksManagementService.Models.Book
+    name: Book
+    href: BooksManagementService.Models.Book.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BooksManagementService.Models.Book
+    name: Book
+    href: BooksManagementService.Models.Book.html
+  - name: )
+- uid: Contracts.IBookRepository.GetBookByISBNAsync*
+  commentId: Overload:Contracts.IBookRepository.GetBookByISBNAsync
+  href: Contracts.IBookRepository.html#Contracts_IBookRepository_GetBookByISBNAsync_System_String_System_Boolean_
+  name: GetBookByISBNAsync
+  nameWithType: IBookRepository.GetBookByISBNAsync
+  fullName: Contracts.IBookRepository.GetBookByISBNAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Contracts.IBookRepository.CountBooksAsync*
+  commentId: Overload:Contracts.IBookRepository.CountBooksAsync
+  href: Contracts.IBookRepository.html#Contracts_IBookRepository_CountBooksAsync_Entities_RequestFeatures_BookParameters_
+  name: CountBooksAsync
+  nameWithType: IBookRepository.CountBooksAsync
+  fullName: Contracts.IBookRepository.CountBooksAsync
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<int>
+  nameWithType: Task<int>
+  fullName: System.Threading.Tasks.Task<int>
+  nameWithType.vb: Task(Of Integer)
+  fullName.vb: System.Threading.Tasks.Task(Of Integer)
+  name.vb: Task(Of Integer)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Contracts.IBookRepository.CreateBook*
+  commentId: Overload:Contracts.IBookRepository.CreateBook
+  href: Contracts.IBookRepository.html#Contracts_IBookRepository_CreateBook_BooksManagementService_Models_Book_
+  name: CreateBook
+  nameWithType: IBookRepository.CreateBook
+  fullName: Contracts.IBookRepository.CreateBook
+- uid: BooksManagementService.Models.Book
+  commentId: T:BooksManagementService.Models.Book
+  parent: BooksManagementService.Models
+  href: BooksManagementService.Models.Book.html
+  name: Book
+  nameWithType: Book
+  fullName: BooksManagementService.Models.Book
+- uid: BooksManagementService.Models
+  commentId: N:BooksManagementService.Models
+  href: BooksManagementService.html
+  name: BooksManagementService.Models
+  nameWithType: BooksManagementService.Models
+  fullName: BooksManagementService.Models
+  spec.csharp:
+  - uid: BooksManagementService
+    name: BooksManagementService
+    href: BooksManagementService.html
+  - name: .
+  - uid: BooksManagementService.Models
+    name: Models
+    href: BooksManagementService.Models.html
+  spec.vb:
+  - uid: BooksManagementService
+    name: BooksManagementService
+    href: BooksManagementService.html
+  - name: .
+  - uid: BooksManagementService.Models
+    name: Models
+    href: BooksManagementService.Models.html
+- uid: Contracts.IBookRepository.DeleteBook*
+  commentId: Overload:Contracts.IBookRepository.DeleteBook
+  href: Contracts.IBookRepository.html#Contracts_IBookRepository_DeleteBook_BooksManagementService_Models_Book_
+  name: DeleteBook
+  nameWithType: IBookRepository.DeleteBook
+  fullName: Contracts.IBookRepository.DeleteBook

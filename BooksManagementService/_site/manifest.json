@@ -1,0 +1,412 @@
+{
+  "source_base_path": "C:/Users/eugen/RiderProjects/BookManagementSystem/BooksManagementService",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.Controllers.BooksController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.Controllers.BooksController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.Controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.DataTransferObjects.BookDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.DataTransferObjects.BookDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.DataTransferObjects.BookForCreationDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.DataTransferObjects.BookForCreationDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.DataTransferObjects.BookForUpdateDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.DataTransferObjects.BookForUpdateDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.DataTransferObjects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.DataTransferObjects.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.Extensions.ServiceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.Extensions.ServiceExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.Mapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.Mapping.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.Migrations.InitialCreate1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.Migrations.InitialCreate1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.Migrations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.Models.Book.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.Models.Book.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.Models.BookGenre.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.Models.BookGenre.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.RabbitMq.RabbitMqListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.RabbitMq.RabbitMqListener.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.RabbitMq.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.RabbitMq.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BooksManagementService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BooksManagementService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Contracts.IBookRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Contracts.IBookRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Contracts.IRepositoryBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Contracts.IRepositoryBase-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Contracts.IRepositoryManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Contracts.IRepositoryManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Contracts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Entities.ApplicationContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Entities.ApplicationContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Entities.Configuration.BookConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Entities.Configuration.BookConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Entities.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Entities.Configuration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Entities.ErrorModel.ErrorDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Entities.ErrorModel.ErrorDetails.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Entities.ErrorModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Entities.ErrorModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Entities.RequestFeatures.BookParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Entities.RequestFeatures.BookParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Entities.RequestFeatures.RequestParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Entities.RequestFeatures.RequestParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Entities.RequestFeatures.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Entities.RequestFeatures.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Entities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Entities.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Library_Web_Application.Extensions.ExceptionMiddlewareExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Library_Web_Application.Extensions.ExceptionMiddlewareExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Library_Web_Application.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Library_Web_Application.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Repository.BookRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Repository.BookRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Repository.Extensions.RepositoryBookExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Repository.Extensions.RepositoryBookExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Repository.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Repository.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Repository.RepositoryBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Repository.RepositoryBase-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Repository.RepositoryManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Repository.RepositoryManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Repository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Repository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

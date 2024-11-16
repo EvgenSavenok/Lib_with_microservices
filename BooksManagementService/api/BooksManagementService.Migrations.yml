@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: BooksManagementService.Migrations
+  commentId: N:BooksManagementService.Migrations
+  id: BooksManagementService.Migrations
+  children:
+  - BooksManagementService.Migrations.InitialCreate1
+  langs:
+  - csharp
+  - vb
+  name: BooksManagementService.Migrations
+  nameWithType: BooksManagementService.Migrations
+  fullName: BooksManagementService.Migrations
+  type: Namespace
+  assemblies:
+  - BooksManagementService
+references:
+- uid: BooksManagementService.Migrations.InitialCreate1
+  commentId: T:BooksManagementService.Migrations.InitialCreate1
+  href: BooksManagementService.Migrations.InitialCreate1.html
+  name: InitialCreate1
+  nameWithType: InitialCreate1
+  fullName: BooksManagementService.Migrations.InitialCreate1

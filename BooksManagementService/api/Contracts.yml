@@ -1,0 +1,64 @@
+### YamlMime:ManagedReference
+items:
+- uid: Contracts
+  commentId: N:Contracts
+  id: Contracts
+  children:
+  - Contracts.IBookRepository
+  - Contracts.IRepositoryBase`1
+  - Contracts.IRepositoryManager
+  langs:
+  - csharp
+  - vb
+  name: Contracts
+  nameWithType: Contracts
+  fullName: Contracts
+  type: Namespace
+  assemblies:
+  - BooksManagementService
+references:
+- uid: Contracts.IBookRepository
+  commentId: T:Contracts.IBookRepository
+  parent: Contracts
+  href: Contracts.IBookRepository.html
+  name: IBookRepository
+  nameWithType: IBookRepository
+  fullName: Contracts.IBookRepository
+- uid: Contracts.IRepositoryBase`1
+  commentId: T:Contracts.IRepositoryBase`1
+  href: Contracts.IRepositoryBase-1.html
+  name: IRepositoryBase<T>
+  nameWithType: IRepositoryBase<T>
+  fullName: Contracts.IRepositoryBase<T>
+  nameWithType.vb: IRepositoryBase(Of T)
+  fullName.vb: Contracts.IRepositoryBase(Of T)
+  name.vb: IRepositoryBase(Of T)
+  spec.csharp:
+  - uid: Contracts.IRepositoryBase`1
+    name: IRepositoryBase
+    href: Contracts.IRepositoryBase-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Contracts.IRepositoryBase`1
+    name: IRepositoryBase
+    href: Contracts.IRepositoryBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Contracts.IRepositoryManager
+  commentId: T:Contracts.IRepositoryManager
+  parent: Contracts
+  href: Contracts.IRepositoryManager.html
+  name: IRepositoryManager
+  nameWithType: IRepositoryManager
+  fullName: Contracts.IRepositoryManager
+- uid: Contracts
+  commentId: N:Contracts
+  href: Contracts.html
+  name: Contracts
+  nameWithType: Contracts
+  fullName: Contracts
